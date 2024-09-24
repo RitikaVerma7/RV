@@ -5,68 +5,132 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ritika Verma | Cybersecurity & AI Specialist</title>
     <style>
-        @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+        
+        /* Body and container styling */
         body {
             margin: 0;
             padding: 0;
             font-family: 'Open Sans', sans-serif;
-            background-color: #1c1b29;
+            background: linear-gradient(135deg, #1c1b29 30%, #3e3b5c);
             color: #efefef;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            overflow: hidden;
         }
+
         .container {
             max-width: 900px;
-            margin: 50px auto;
+            padding: 40px;
             text-align: center;
-            background-color: #2a293b;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            background: rgba(43, 41, 66, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1.5s ease-in-out;
+            transition: all 0.3s ease;
         }
+
+        .container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Profile picture styling */
         #profilepic img {
             border-radius: 50%;
             width: 200px;
             height: 200px;
-            margin: 20px 0;
+            margin-bottom: 20px;
+            border: 5px solid aquamarine;
+            transition: transform 0.5s ease;
         }
+
+        #profilepic img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Text and typography */
         h1 {
-            font-size: 2.5em;
+            font-size: 3em;
             margin: 10px 0;
         }
+
         h3 {
             font-weight: normal;
             color: aquamarine;
         }
-        a {
+
+        /* Link styling */
+        .links a {
             color: aquamarine;
             text-decoration: none;
-            margin: 0 10px;
             font-weight: bold;
+            margin: 0 15px;
+            position: relative;
+            transition: color 0.3s ease;
         }
-        a:hover {
-            text-decoration: underline;
+
+        .links a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: aquamarine;
+            transition: width 0.3s ease;
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
         }
+
+        .links a:hover {
+            color: #ffffff;
+        }
+
+        .links a:hover::after {
+            width: 100%;
+        }
+
+        /* Paragraph styling */
         p {
             text-align: justify;
-            line-height: 1.6;
-            margin: 10px 0;
+            line-height: 1.8;
+            margin: 15px 0;
+            font-size: 1.1em;
         }
-        .links {
-            margin: 20px 0;
+
+        /* Animation for fade-in effect */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
+
+        /* Media queries for mobile responsiveness */
         @media (max-width: 768px) {
             .container {
                 width: 90%;
+                padding: 30px;
             }
+
             #profilepic img {
                 width: 150px;
                 height: 150px;
             }
+
             h1 {
-                font-size: 2em;
+                font-size: 2.2em;
+            }
+
+            p {
+                font-size: 1em;
             }
         }
     </style>
